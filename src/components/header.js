@@ -14,8 +14,8 @@ class Header extends Component {
                             <i class="fa fa-caret-down"></i>
                         </button>
                         <div class="Header_dropdown_content">
-                            <Link to="/movies"><a href="#">Movies</a></Link>
-                            <a href="#">TV Shows</a>
+                            <Link to="/movies"><p>Movies</p></Link>
+                            <Link to="/shows"><p>TV Shows</p></Link>
                         </div>
                     </div>
             </div>

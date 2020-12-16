@@ -1,7 +1,6 @@
 import React, { Component,useState,useEffect } from 'react';
 import '../styles/header.scss';
 import {Link} from 'react-router-dom';
-import HeaderSearch from '../components/headersearch';
 import NestedGridMovies from '../materialui/moviegrids';
 
 const Movies = () => {
@@ -18,21 +17,9 @@ const Movies = () => {
             console.log(err);
         }
     })
-    useEffect(()=>{
-        fetchMovies();
-    },[query]);
-    // const searchMovies = async (e) => {
-    //     const url = `https://api.themoviedb.org/3/search/movie?api_key=ce65fdc89d7b40c250cf269f97661585&language=en-US&query=${query}&page=1&include_adult=false`; 
-    //     try{
-    //         const res = await fetch(url);
-    //         const data = await res.json();
-    //         console.log(data);
-    //         setMovies(data.results);
-    //     }catch(err){
-    //         console.log(err);
-    //     }
-    // };
-    // setsearchMovies(searchMovies);
+    useEffect(()=>{            // useEffect runs after every render (infinite loop) in order to stop that,
+        fetchMovies();              // we put second arguement passing in secondary variable.
+    },[query]);                 // dun write whole function in useEffect(). Just call function from useEffect()
     return (
         <div>
             <div class="Header">
@@ -46,7 +33,7 @@ const Movies = () => {
                         </button>
                         <div class="Header_dropdown_content">
                             <Link to="/"><p>Trending</p></Link>
-                            <a href="#">TV Shows</a>
+                            <Link to="/shows"><p>TV Shows</p></Link>
                         </div>
                     </div>
             </div>

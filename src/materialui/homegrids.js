@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/poster.scss';
+import {Link} from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
@@ -36,13 +37,8 @@ export default function NestedGrid(props) {
         <Grid item xs={2}>
           <div className="poster">
           <p className="poster_title">Title:   {trending.title}</p>
-          <img className="poster_img" src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${trending.poster_path}`} />
+          <Link to={`/movies/${trending.id}`}><img className="poster_img" src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${trending.poster_path}`} /></Link>
           </div>
-          {/* <Paper className={classes.paper}>
-          <div>
-          <img className={classes.poster} src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${trending.poster_path}`} />
-          </div>
-          </Paper> */}
         </Grid>
         )))}
       </React.Fragment>

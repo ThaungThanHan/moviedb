@@ -1,0 +1,28 @@
+// .Overview{
+//     border: 1px solid red;
+//     width:100%;
+//     height:40rem;
+//     margin-left:5.5rem;
+//     margin-right:4rem;
+//     margin-top:.7rem;
+//     background-color:white;
+//     padding:0 3rem;
+//     &_Poster{
+//         border:1px solid purple;
+//         width:30rem;
+//         height:40rem;
+//         margin-left:2rem
+//     }
+//     &_details{
+//         border:1px solid blue;
+//     }
+// }
+.genres_box{
+    padding:1rem;
+    margin-left:10%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    width:80%;
+    height:10rem;
+}

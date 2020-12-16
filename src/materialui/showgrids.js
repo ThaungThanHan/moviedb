@@ -1,6 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import '../styles/poster.scss';
+import {Link} from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
@@ -28,17 +28,17 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function NestedGridMovies(props) {
+export default function NestedGridShows(props) {
   const classes = useStyles();
     function FormRow() {
     return (
         <React.Fragment>
-        {props.movies.map((movie=>(
+        {props.shows.map((show=>(
         <Grid item xs={2}>
           <div className="poster">
-          <p className="poster_title">Title:   {movie.title}</p>
-          <Link to={`/movies/${movie.id}`}>
-          <img className="poster_img" src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`} />
+          <p className="poster_title">Title:   {show.name}</p>
+          <Link to={`/shows/${show.id}`}>
+            <img className="poster_img" src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${show.poster_path}`} />
           </Link>
           </div>
           {/* <Paper className={classes.paper}>
