@@ -1,0 +1,86 @@
+.Header{
+    display:flex;
+    justify-content: space-between;             //this makes it all in place
+    border-bottom: 1px solid black;
+    padding:1rem;
+    background-color:#353839;
+    align-content: center;
+    &_logo{
+        color:white;
+    }
+    &_links{
+        color:white;
+        list-style: none;
+        display:flex;
+        &_link{
+                margin-right:1rem;
+                align-self: center;
+        }
+    }
+    &_search{
+        &_searchbox{
+            height:2.5rem;
+            width:50%;
+            border-radius: 15px;
+            padding:.5rem;
+            transition:all .2s;
+            margin-bottom:1.5rem;
+            border:1px solid black;
+            border-width:.1rem;
+            margin-right:3rem;
+            -webkit-box-shadow: 10px 17px 34px -24px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 17px 34px -24px rgba(0,0,0,0.75);
+box-shadow: 10px 17px 34px -24px rgba(0,0,0,0.75);
+        &:focus{
+            outline:none;   
+            font-weight:bold;
+            border:1px solid #7ed56f;
+            border-width:.2rem;
+        }
+        }
+    }
+}
+
+.Header_dropdown{
+    overflow:hidden;
+    &:hover .Header_dropdown_content{
+        display:flex;
+        flex-direction: column;
+    }
+    &_button{
+        width:10rem;
+        height:2rem;
+        background-color:#353839;
+        color:white
+    }
+    &_content{
+        display:none;
+        position: absolute;
+        &_movies{
+            display:flex;
+            justify-content: center;
+            margin-top:.5rem;
+        }
+        &_shows{
+            display:flex;
+            justify-content: center;
+            margin-top:.5rem;        }
+    }
+    &_content a{
+
+        text-align: center;
+        justify-content:center;
+        width:10rem;
+        background-color:white;
+        height:3rem;
+        &:hover{
+            background-color: black;
+            .Header_dropdown_content_movies{
+                color:white;
+            }
+            .Header_dropdown_content_shows{
+                color:white;
+            }
+        }
+    }
+}
